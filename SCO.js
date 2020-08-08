@@ -123,9 +123,9 @@ const SCO = {
 
         // cmi.core.exit: Indicates how or why the learner left the SCO
         if (this.inProgress()) {
-            this.set('cmi.core.exit', 'suspend');
+            this.set("cmi.exit", "suspend");
         } else {
-            this.set('cmi.core.exit', 'logout');
+            this.set("cmi.exit', 'logout");
         }
         console.log("SCO on close", SCO);
         this.commit();
@@ -212,7 +212,7 @@ const SCO = {
 
     // cmi.core.entry: Asserts whether the learner has previously accessed the SCO
     entry: function () {
-        return this.get('cmi.core.entry');
+        return this.get('cmi.entry');
     },
 
     // cmi.core.lesson_mode: Identifies one of three possible modes in which the SCO may be presented to the learner
