@@ -1,0 +1,40 @@
+
+<!doctype html>
+<html lang="en">
+<head>
+    <title>Docebo Content</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta http-equiv="content-type" content="text/html; charset=utf-8;">
+    <style>
+        html, body, iframe, #content {
+            border: 0;
+            padding: 0px;
+            margin: 0;
+            height: 100%;
+            width: 100%;
+        }
+
+        html, body {
+            overflow: hidden;
+        }
+    </style>
+    <script>
+        (function () {
+            function appendScript(url) {
+                const script = document.createElement('script');
+                script.src = url;
+                script.type = 'text/javascript';
+                script.async = false;
+
+                document.getElementsByTagName('head')[0].appendChild(script);
+            }
+
+            appendScript("https://dcd-fake-vendor-source.s3-eu-west-1.amazonaws.com/SCORM/2004/SCO.js");
+            appendScript("https://dcd-fake-vendor-source.s3-eu-west-1.amazonaws.com/SCORM/2004/diagnostics.js")
+        })();
+
+    </script>
+</head>
+<body>
+</body>
+</html>
